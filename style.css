@@ -7,12 +7,20 @@ body {
   justify-content: center;
   height: 100vh;
 }
-.background1{
-    background-image: url('images/background1.jpg');
-      background-size: cover; /* Makes the image cover the whole page */
-      background-repeat: no-repeat;
-      background-position: center center;
+.backgroundimage {
+  background-image: url('../images/back.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 100vh; /* or adjust based on layout */
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background-color: lightblue;
 }
+
 
 /* Outer wrapper with black-yellowish background */
 .main-container {
@@ -178,5 +186,56 @@ body {
   padding-top: 10px;
 }
 .country-name {
-  font-weight: bold;
+  font-weight: bold;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.greeting {
+  flex: 1;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #2c2c2c;
+  padding: 8px 16px;
+  border-radius: 25px;
+  max-width: 300px;
+}
+
+#location-search {
+  background: none;
+  border: none;
+  outline: none;
+  color: white;
+  font-size: 14px;
+  width: 100%;
+  font-family: 'Inter', sans-serif;
+}
+
+#location-search::placeholder {
+  color: #888;
+}
+
+#search-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  color: #f0c000;
+}
+
+#search-button:hover {
+  transform: scale(1.1);
+  transition: transform 0.2s ease;
 }
